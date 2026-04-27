@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing | AeroAnalytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #111318;
+            color: #e2e2e8;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#fff6ed",
+                      "background": "#111318",
+                      "primary-fixed-dim": "#00dbe7",
+                      "on-secondary": "#003732",
+                      "outline-variant": "#3a494b",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#271900",
+                      "primary-fixed": "#74f5ff",
+                      "on-secondary-container": "#00534c",
+                      "on-tertiary-container": "#7e5900",
+                      "surface-dim": "#111318",
+                      "secondary": "#43ecdb",
+                      "tertiary-fixed-dim": "#ffba20",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#2f3035",
+                      "surface": "#111318",
+                      "on-primary-fixed": "#002022",
+                      "on-primary-container": "#006a71",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed": "#00201d",
+                      "on-background": "#e2e2e8",
+                      "surface-container": "#1e2024",
+                      "tertiary-container": "#ffd58c",
+                      "secondary-fixed-dim": "#2addcd",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed": "#ffdea8",
+                      "outline": "#849495",
+                      "inverse-surface": "#e2e2e8",
+                      "on-primary": "#00363a",
+                      "primary": "#e1fdff",
+                      "surface-tint": "#00dbe7",
+                      "on-tertiary-fixed-variant": "#5e4200",
+                      "secondary-fixed": "#57fae9",
+                      "on-surface": "#e2e2e8",
+                      "inverse-primary": "#00696f",
+                      "surface-bright": "#37393e",
+                      "surface-container-lowest": "#0c0e12",
+                      "on-tertiary": "#412d00",
+                      "on-secondary-fixed-variant": "#005049",
+                      "surface-container-low": "#1a1c20",
+                      "on-surface-variant": "#b9cacb",
+                      "surface-container-highest": "#333539",
+                      "surface-variant": "#333539",
+                      "secondary-container": "#00cfbf",
+                      "surface-container-high": "#282a2e",
+                      "primary-container": "#00f2ff",
+                      "on-primary-fixed-variant": "#004f54"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "margin": "32px",
+                      "unit": "4px",
+                      "container-max": "1440px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "body-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Space Grotesk"],
+                      "data-display": ["Space Grotesk"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "data-display": ["40px", {"lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-slate-950/80 backdrop-blur-xl docked full-width top-0 z-50 border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] flex items-center justify-between px-6 py-4 max-w-full sticky">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-['Space_Grotesk']">AeroAnalytics</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-400 font-medium hover:text-slate-100 font-['Space_Grotesk'] tracking-tight hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">Features</a>
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 font-bold font-['Space_Grotesk'] tracking-tight px-3" href="#">Pricing</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 font-['Space_Grotesk'] tracking-tight hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">About</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 font-['Space_Grotesk'] tracking-tight hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">Dashboard</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 font-medium hover:text-slate-100 transition-colors active:scale-95 duration-200">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:brightness-110 active:scale-95 transition-all duration-300 neon-glow">Get Started</button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 px-6 overflow-hidden">
+<div class="absolute inset-0 z-[-1]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center space-y-stack-md">
+<span class="inline-block px-4 py-1.5 rounded-full glass-card text-cyan-400 text-label-md font-label-md uppercase tracking-widest border-cyan-400/30">Atmospheric Precision</span>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">Elevate Your Logistics with Intelligent Data</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose the tier that matches your operational complexity. From personal monitoring to global enterprise coordination.</p>
+</div>
+</section>
+<!-- Pricing Cards Section -->
+<section class="px-6 pb-24">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Starter Tier -->
+<div class="glass-card p-stack-lg rounded-xl flex flex-col hover:border-cyan-400/40 transition-all duration-500 group">
+<div class="space-y-unit mb-8">
+<h3 class="font-headline-md text-headline-md text-white">Starter</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">For enthusiasts and small-scale atmospheric research.</p>
+</div>
+<div class="mb-8">
+<span class="font-data-display text-data-display text-primary-fixed-dim">$49</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">5 Active Weather Nodes</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Real-time Dashboard</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">24h Historical Archive</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant/50">
+<span class="material-symbols-outlined text-sm">cancel</span>
+<span class="text-body-md font-body-md">API Access</span>
+</li>
+</ul>
+<button class="w-full py-4 glass-card border-white/20 text-white font-bold rounded-lg hover:bg-white/10 transition-all active:scale-[0.98]">Choose Starter</button>
+</div>
+<!-- Professional Tier (Featured) -->
+<div class="glass-card p-stack-lg rounded-xl flex flex-col border-cyan-400/50 shadow-[0_0_40px_rgba(0,219,231,0.1)] relative scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyan-400 text-background px-4 py-1 rounded-full text-label-md font-bold uppercase tracking-tighter">Most Popular</div>
+<div class="space-y-unit mb-8">
+<h3 class="font-headline-md text-headline-md text-white">Professional</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">For regional logistics teams requiring predictive precision.</p>
+</div>
+<div class="mb-8">
+<span class="font-data-display text-data-display text-primary-fixed-dim">$199</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">50 Active Weather Nodes</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">AI-Driven Predictive Alerts</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">30-Day Historical Archive</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Standard REST API</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-bold rounded-lg neon-glow hover:brightness-110 transition-all active:scale-[0.98]">Choose Professional</button>
+</div>
+<!-- Enterprise Tier -->
+<div class="glass-card p-stack-lg rounded-xl flex flex-col hover:border-cyan-400/40 transition-all duration-500 group">
+<div class="space-y-unit mb-8">
+<h3 class="font-headline-md text-headline-md text-white">Enterprise</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Global network access with dedicated infrastructure.</p>
+</div>
+<div class="mb-8">
+<span class="font-data-display text-data-display text-primary-fixed-dim">Custom</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Unlimited Global Nodes</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Custom Atmospheric Models</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Real-time Webhook Stream</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span>
+<span class="text-body-md font-body-md">Dedicated Account Manager</span>
+</li>
+</ul>
+<button class="w-full py-4 glass-card border-white/20 text-white font-bold rounded-lg hover:bg-white/10 transition-all active:scale-[0.98]">Contact Sales</button>
+</div>
+</div>
+</section>
+<!-- Feature Comparison Table -->
+<section class="px-6 py-24 bg-surface-container-low">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Compare Capabilities</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Detailed breakdown of atmospheric analytical tools.</p>
+</div>
+<div class="glass-card rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-white/10">
+<th class="p-6 font-headline-md text-white">Feature</th>
+<th class="p-6 text-center text-on-surface-variant">Starter</th>
+<th class="p-6 text-center text-cyan-400">Professional</th>
+<th class="p-6 text-center text-on-surface-variant">Enterprise</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr>
+<td class="p-6 font-medium">Data Refresh Rate</td>
+<td class="p-6 text-center text-on-surface-variant">5 min</td>
+<td class="p-6 text-center text-white">1 min</td>
+<td class="p-6 text-center text-white">Real-time</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Predictive Window</td>
+<td class="p-6 text-center text-on-surface-variant">6 Hours</td>
+<td class="p-6 text-center text-white">72 Hours</td>
+<td class="p-6 text-center text-white">14 Days</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Logistics Integration</td>
+<td class="p-6 text-center text-on-surface-variant">—</td>
+<td class="p-6 text-center text-white">Standard</td>
+<td class="p-6 text-center text-white">Custom SDK</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Custom Reporting</td>
+<td class="p-6 text-center text-on-surface-variant">Manual</td>
+<td class="p-6 text-center text-white">Automated</td>
+<td class="p-6 text-center text-white">White-label</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="px-6 py-24 max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white text-center mb-16">Frequently Asked Questions</h2>
+<div class="space-y-stack-md">
+<div class="glass-card p-6 rounded-lg">
+<h4 class="font-headline-md text-primary mb-2">How accurate is the predictive modeling?</h4>
+<p class="text-on-surface-variant font-body-md">Our models utilize the Unified Atmospheric Mesh (UAM), achieving 98.4% accuracy for 24-hour forecasts and 92% for 72-hour windows in urban logistics zones.</p>
+</div>
+<div class="glass-card p-6 rounded-lg">
+<h4 class="font-headline-md text-primary mb-2">Can we migrate between tiers?</h4>
+<p class="text-on-surface-variant font-body-md">Yes, you can upgrade at any time. Downgrades take effect at the end of your current billing cycle. Data history is preserved during transitions.</p>
+</div>
+<div class="glass-card p-6 rounded-lg">
+<h4 class="font-headline-md text-primary mb-2">What qualifies as an "Active Node"?</h4>
+<p class="text-on-surface-variant font-body-md">An active node is any unique geographical coordinate or IoT sensor point currently being monitored for real-time atmospheric updates.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-24">
+<div class="max-w-7xl mx-auto relative rounded-3xl overflow-hidden glass-card p-12 text-center">
+<div class="absolute inset-0 bg-gradient-to-r from-cyan-900/20 to-slate-900/20 z-[-1]"></div>
+<h2 class="font-headline-xl text-headline-xl text-white mb-6">Ready to harness the atmosphere?</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto mb-10">Join over 1,400 logistics providers using AeroAnalytics for mission-critical weather intelligence.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-body-lg neon-glow hover:brightness-110 active:scale-95 transition-all">Start Free Trial</button>
+<button class="glass-card px-10 py-4 rounded-xl font-bold text-body-lg hover:bg-white/10 active:scale-95 transition-all">Request Demo</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950/90 backdrop-blur-lg border-t border-white/5 w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<span class="text-xl font-bold text-cyan-400 font-['Space_Grotesk']">AeroAnalytics</span>
+<p class="font-['Space_Grotesk'] text-slate-300 text-sm max-w-xs">Atmospheric Precision for Global Logistics. Engineering the future of predictive weather intelligence.</p>
+<p class="font-['Space_Grotesk'] text-slate-300 text-sm">© 2024 AeroAnalytics. All rights reserved.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] text-sm hover:underline decoration-cyan-400 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] text-sm hover:underline decoration-cyan-400 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] text-sm hover:underline decoration-cyan-400 underline-offset-4" href="#">System Status</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] text-sm hover:underline decoration-cyan-400 underline-offset-4" href="#">API Docs</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] text-sm hover:underline decoration-cyan-400 underline-offset-4" href="#">Contact Support</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

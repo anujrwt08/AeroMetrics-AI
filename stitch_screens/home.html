@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#fff6ed",
+                    "background": "#111318",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-secondary": "#003732",
+                    "outline-variant": "#3a494b",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#271900",
+                    "primary-fixed": "#74f5ff",
+                    "on-secondary-container": "#00534c",
+                    "on-tertiary-container": "#7e5900",
+                    "surface-dim": "#111318",
+                    "secondary": "#43ecdb",
+                    "tertiary-fixed-dim": "#ffba20",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#2f3035",
+                    "surface": "#111318",
+                    "on-primary-fixed": "#002022",
+                    "on-primary-container": "#006a71",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#00201d",
+                    "on-background": "#e2e2e8",
+                    "surface-container": "#1e2024",
+                    "tertiary-container": "#ffd58c",
+                    "secondary-fixed-dim": "#2addcd",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#ffdea8",
+                    "outline": "#849495",
+                    "inverse-surface": "#e2e2e8",
+                    "on-primary": "#00363a",
+                    "primary": "#e1fdff",
+                    "surface-tint": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#5e4200",
+                    "secondary-fixed": "#57fae9",
+                    "on-surface": "#e2e2e8",
+                    "inverse-primary": "#00696f",
+                    "surface-bright": "#37393e",
+                    "surface-container-lowest": "#0c0e12",
+                    "on-tertiary": "#412d00",
+                    "on-secondary-fixed-variant": "#005049",
+                    "surface-container-low": "#1a1c20",
+                    "on-surface-variant": "#b9cacb",
+                    "surface-container-highest": "#333539",
+                    "surface-variant": "#333539",
+                    "secondary-container": "#00cfbf",
+                    "surface-container-high": "#282a2e",
+                    "primary-container": "#00f2ff",
+                    "on-primary-fixed-variant": "#004f54"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin": "32px",
+                    "unit": "4px",
+                    "container-max": "1440px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Space Grotesk"],
+                    "data-display": ["Space Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "data-display": ["40px", {"lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #111318; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(0, 219, 231, 0.5);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<nav class="flex items-center justify-between px-6 py-4 max-w-full font-['Space_Grotesk'] text-slate-100 tracking-tight">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-bold tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]" href="#">AeroAnalytics</a>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-400 font-medium hover:text-slate-100 hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">Features</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">Pricing</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 hover:bg-white/5 transition-all duration-300 rounded-lg px-3 py-1" href="#">About</a>
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 font-bold" href="#">Dashboard</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-slate-400 font-medium hover:text-slate-100 px-4 py-2 transition-all active:scale-95">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold transition-all hover:bg-primary-fixed-dim active:scale-95 shadow-[0_0_20px_rgba(0,242,255,0.2)]">Get Started</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- Background Visualization -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[120px]"></div>
+<img class="w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Futuristic 3D wireframe globe with glowing atmospheric pressure layers and data points in deep cyan and indigo tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAah4ND2eZvbwDPw0-NR7hrBTP7vI5hEOATDyfIdmoJdG_5PY5ZOU7FiemglHAgxGdKvL_Upsqzst9twVKT6Kow6qZz-4O0fN-Cnjrhs5MgZPnPlsWRajXPzOFkhVmUgWQGBvfr4gFj2Rmj2xy4NyYQy-4pLz0t6_f-dH-RDASGlV7-E-NjAi5hXx6J23LZTMezepxkRlSAMZN-kM35Mx6ts9ajzl_jS9LKGFbgFN9kphGKbfOp49FxE8d3JIpgB6VpuaD_pQIMSgT2"/>
+</div>
+<div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-secondary uppercase tracking-widest">Live Atmospheric Data v4.2</span>
+</div>
+<h1 class="font-headline-xl text-primary max-w-2xl text-glow">
+                        Atmospheric Intelligence for the Global Enterprise
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                        AeroAnalytics provides high-fidelity meteorological modeling powered by predictive AI. Secure your logistics chain against volatile atmospheric shifts with sub-meter precision.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 active:scale-95 neon-glow">
+                            Explore the Platform
+                        </button>
+<button class="px-8 py-4 rounded-xl border border-primary-container/30 text-primary-fixed-dim font-bold text-lg backdrop-blur-xl hover:bg-white/5 transition-all active:scale-95">
+                            Watch Demo
+                        </button>
+</div>
+<div class="flex gap-12 pt-8 border-t border-white/5">
+<div>
+<p class="font-data-display text-primary leading-none">99.9%</p>
+<p class="font-label-md text-on-surface-variant mt-2">Prediction Accuracy</p>
+</div>
+<div>
+<p class="font-data-display text-primary leading-none">5ms</p>
+<p class="font-label-md text-on-surface-variant mt-2">Data Latency</p>
+</div>
+<div>
+<p class="font-data-display text-primary leading-none">140+</p>
+<p class="font-label-md text-on-surface-variant mt-2">Global Satellites</p>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img class="rounded-xl shadow-2xl relative z-10" data-alt="High-fidelity UI dashboard showing real-time global weather patterns with glowing storm cells and logistics routes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjcd32YapPAT2RnbnaU6UUsfwajZA_Nt6iJ5oD_betOpBE8JxXt_ewclliAom8HKPshFq0dJR0QypLwuOnPLisUH-2gBziTZZKaBl6Stb9bAQ_fau8yNzEQekdWGPVlVr-ylHItMqRjswCWe0JfmapOQKuh9VKs6Xn24vNF6RoNF6Y8WAezgQFZ9ynFwF7aZIVCWf7VOqj5L05_S1-_CCrIVw4DX5-PeahIHEUA2lhbqtz_yZLtUWvYGA9J1nqGfch6PWkL4MY7Y7I"/>
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="container mx-auto px-6">
+<div class="mb-16 space-y-4">
+<h2 class="font-headline-lg text-primary text-center">Precision Infrastructure</h2>
+<p class="font-body-md text-on-surface-variant text-center max-w-2xl mx-auto">
+                        Our distributed sensor network and proprietary AI models deliver unprecedented clarity into the world's most complex systems.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Satellite Tracking -->
+<div class="md:col-span-8 glass-card rounded-3xl p-8 flex flex-col justify-between group cursor-pointer overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="p-4 rounded-2xl bg-primary-container/10 border border-primary-container/20">
+<span class="material-symbols-outlined text-4xl text-primary-container" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+<div class="mt-8">
+<h3 class="font-headline-md text-primary mb-2">Satellite Tracking</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Real-time telemetry from over 140 low-orbit satellites providing sub-meter resolution of atmospheric phenomena.</p>
+</div>
+<div class="absolute -right-10 bottom-0 w-1/2 h-full opacity-20 pointer-events-none group-hover:opacity-40 transition-opacity">
+<img class="w-full h-full object-contain" data-alt="Highly detailed 3D render of a futuristic weather satellite orbiting earth with glowing solar panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvp2g9B6yaDP6qrb5a4OYTrTPEMDXjYgjbt7jCp_n_-QBMxLjX9hI6aN6PC6vhpe8Azs5CoEv_WMdi12V4YhM8_a_oCJovwOdJ6lmOX05eZcj-3g0_NvPHbCANGDtlgMbU8Q5CWMeal5VSi3XXUlrteOlVUID5tILvJyZmSTOVtfFgEkEyVvetEFqOxqleR9w3W6UDowFXQrsgY8bBq70pem3k9Zi6_-6SKKryyrPgG83AxkxUQZf88lfIZb5TuR8c67uY2afIkCIE"/>
+</div>
+</div>
+<!-- Predictive AI -->
+<div class="md:col-span-4 glass-card rounded-3xl p-8 flex flex-col items-center text-center justify-center space-y-6 group cursor-pointer hover:bg-white/[0.08] transition-all">
+<div class="relative">
+<div class="absolute inset-0 bg-secondary blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<span class="material-symbols-outlined text-6xl text-secondary relative z-10" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-primary mb-2">Predictive AI</h3>
+<p class="font-body-sm text-on-surface-variant">Neural networks trained on 50 years of climate data to forecast events with 99.9% accuracy.</p>
+</div>
+</div>
+<!-- Logistics Optimization -->
+<div class="md:col-span-4 glass-card rounded-3xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-white/[0.08] transition-all">
+<div class="p-4 w-fit rounded-2xl bg-tertiary-container/10 border border-tertiary-container/20">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">dynamic_feed</span>
+</div>
+<div class="mt-12">
+<h3 class="font-headline-md text-primary mb-2">Logistics Optimization</h3>
+<p class="font-body-sm text-on-surface-variant">Route adaptation in real-time to avoid high-risk atmospheric cells and turbulence.</p>
+</div>
+</div>
+<!-- Global Coverage -->
+<div class="md:col-span-8 glass-card rounded-3xl p-1 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark aesthetic world map with neon data corridors connecting major global logistics hubs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ilIJhkY0Fc3IVAxQX2FgWGPqcL6vHT2rt3sMNM8GLLR2rI5hgvaejmR3a54dmrmrzFS5C0RCYRJyD6H7feutAMt5X-Ljt5zRFRCYmC2FEukrJTF43_gqgHlGbZjEG7VgbZi2T2nhgs9Br5KXhDJbYNw036umnElZfIXBfBKhDWomY-dXhtteASrYkvhfu6M0SyJSGgeU4nCJQOTUwiF-zTf9Di5rO1QodG1OfgKNhM6kEvv4IvTRZzp6BJs8mC7qUj8xHXKZvlp8"/>
+</div>
+<div class="relative z-20 p-8 flex flex-col justify-end h-full">
+<h3 class="font-headline-md text-primary">Universal Coverage</h3>
+<p class="font-body-sm text-on-surface-variant">Every coordinate on Earth monitored in 4K resolution every 60 seconds.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 relative">
+<div class="absolute inset-0 bg-primary-container/5 mix-blend-overlay"></div>
+<div class="container mx-auto px-6">
+<div class="glass-card rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden border-primary-container/20">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+<h2 class="font-headline-xl text-primary mb-8 max-w-4xl mx-auto">Ready to secure your operations against the elements?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                        Join the world's leading logistics and aviation firms already using AeroAnalytics for mission-critical decision making.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-bold text-xl transition-all hover:scale-105 active:scale-95 neon-glow">
+                            Start Free Integration
+                        </button>
+<button class="px-10 py-5 rounded-2xl border border-white/20 text-on-surface font-bold text-xl backdrop-blur-xl hover:bg-white/10 transition-all active:scale-95">
+                            Talk to an Analyst
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-slate-950/90 backdrop-blur-lg border-t border-white/5 font-['Space_Grotesk'] text-slate-300 text-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<a class="text-xl font-bold text-cyan-400" href="#">AeroAnalytics</a>
+<p class="max-w-md text-slate-500 leading-relaxed">
+                    The world's most advanced atmospheric data platform. Bridging the gap between orbital observation and enterprise intelligence.
+                </p>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-cyan-400/10 hover:text-cyan-400 transition-all">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-cyan-400/10 hover:text-cyan-400 transition-all">
+<span class="material-symbols-outlined text-lg">mail</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-cyan-400/10 hover:text-cyan-400 transition-all">
+<span class="material-symbols-outlined text-lg">public</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs">Platform</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">API Docs</a></li>
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">System Status</a></li>
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Changelog</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs">Legal &amp; Support</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Contact Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center">
+<p class="text-slate-500">© 2024 AeroAnalytics. Atmospheric Precision for Global Logistics.</p>
+</div>
+</footer>
+</body></html>

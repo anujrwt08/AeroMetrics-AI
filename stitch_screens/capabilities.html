@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AeroAnalytics | Product Features</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#fff6ed",
+                    "background": "#111318",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-secondary": "#003732",
+                    "outline-variant": "#3a494b",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#271900",
+                    "primary-fixed": "#74f5ff",
+                    "on-secondary-container": "#00534c",
+                    "on-tertiary-container": "#7e5900",
+                    "surface-dim": "#111318",
+                    "secondary": "#43ecdb",
+                    "tertiary-fixed-dim": "#ffba20",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#2f3035",
+                    "surface": "#111318",
+                    "on-primary-fixed": "#002022",
+                    "on-primary-container": "#006a71",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#00201d",
+                    "on-background": "#e2e2e8",
+                    "surface-container": "#1e2024",
+                    "tertiary-container": "#ffd58c",
+                    "secondary-fixed-dim": "#2addcd",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#ffdea8",
+                    "outline": "#849495",
+                    "inverse-surface": "#e2e2e8",
+                    "on-primary": "#00363a",
+                    "primary": "#e1fdff",
+                    "surface-tint": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#5e4200",
+                    "secondary-fixed": "#57fae9",
+                    "on-surface": "#e2e2e8",
+                    "inverse-primary": "#00696f",
+                    "surface-bright": "#37393e",
+                    "surface-container-lowest": "#0c0e12",
+                    "on-tertiary": "#412d00",
+                    "on-secondary-fixed-variant": "#005049",
+                    "surface-container-low": "#1a1c20",
+                    "on-surface-variant": "#b9cacb",
+                    "surface-container-highest": "#333539",
+                    "surface-variant": "#333539",
+                    "secondary-container": "#00cfbf",
+                    "surface-container-high": "#282a2e",
+                    "primary-container": "#00f2ff",
+                    "on-primary-fixed-variant": "#004f54"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin": "32px",
+                    "unit": "4px",
+                    "container-max": "1440px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Space Grotesk"],
+                    "data-display": ["Space Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "data-display": ["40px", {"lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.4);
+        }
+        .conic-gauge {
+            background: conic-gradient(from 0deg, #00dbe7 0%, #00cfbf 75%, transparent 75%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 max-w-full font-['Space_Grotesk'] text-slate-100 tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">
+                AeroAnalytics
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 font-bold" href="#">Features</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-all duration-300 rounded-lg px-2 py-1" href="#">Pricing</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-all duration-300 rounded-lg px-2 py-1" href="#">About</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-all duration-300 rounded-lg px-2 py-1" href="#">Dashboard</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-slate-400 font-medium hover:text-slate-100 hover:bg-white/5 transition-all duration-300 rounded-lg px-4 py-2 active:scale-95">Sign In</button>
+<button class="bg-cyan-400 text-slate-950 font-bold px-6 py-2 rounded-lg hover:bg-cyan-300 transition-all duration-300 active:scale-95 neon-glow-primary">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+<!-- Hero Section -->
+<header class="text-center space-y-stack-md max-w-3xl mx-auto">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary/30 text-secondary text-label-md mb-stack-sm">
+<span class="material-symbols-outlined text-[14px] mr-2" data-icon="auto_awesome">auto_awesome</span>
+                ATMOSPHERIC PRECISION ECOSYSTEM
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-none">Engineering the Future of Global Logistics</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our integrated suite leverages orbital data and AI to solve the most complex atmospheric routing challenges in real-time.</p>
+</header>
+<!-- Feature Section 1: Global Satellite Mesh -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 space-y-stack-lg">
+<div class="space-y-stack-sm">
+<span class="text-primary-fixed-dim font-label-md uppercase tracking-widest">Core Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Global Satellite Mesh</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuous, low-latency telemetry from 142 orbital nodes providing sub-meter resolution of atmospheric pressure and moisture density across every square mile of the planet.</p>
+</div>
+<ul class="space-y-stack-md">
+<li class="flex items-start space-x-4">
+<div class="mt-1 bg-primary-container/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="satellite_alt">satellite_alt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold text-on-surface">Sub-60s Latency</h4>
+<p class="text-body-sm text-on-surface-variant">Data travels from orbit to your dashboard in less than a minute.</p>
+</div>
+</li>
+<li class="flex items-start space-x-4">
+<div class="mt-1 bg-primary-container/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="grid_view">grid_view</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold text-on-surface">Mesh Density</h4>
+<p class="text-body-sm text-on-surface-variant">Proprietary hexagonal grid minimizes data interpolation errors.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-card rounded-xl overflow-hidden aspect-video relative group">
+<img alt="Global Satellite Mesh Visualization" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="cinematic orbital view of earth at night overlaid with a glowing cyan digital hexagonal mesh grid and thin light trails representing satellites" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkCkbb_eI__h8ykVyZaVpmdJlX29wn9oJ-rs5Tew6Do4BRDnsYt06m-i9zROff1St3-K90mGyPXttCQqVDrFQAPFTugpqt8Uu9Pg6awaUn0qZoJTGGcSFEbqltOATFXRUR13-4ZmE4Y6H0d8gDNuCuofpGKXpm6xHBVhCf1GtRC6wV-bczuGHOE19U_tn68r33QeR-fr5vMCloK0BvFERPFSd7MvHCJjN4Vd61ge7CHAqqyzJcRjfZCJQg0SMFFcAMFZV4v1TnSE59"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<!-- Mockup Overlay -->
+<div class="absolute bottom-6 left-6 right-6 flex gap-4">
+<div class="glass-card p-4 rounded-lg flex-1 border-white/10">
+<span class="text-label-md text-primary-fixed-dim">UPLINK STATUS</span>
+<div class="text-headline-md font-data-display text-white">99.98%</div>
+</div>
+<div class="glass-card p-4 rounded-lg flex-1 border-white/10">
+<span class="text-label-md text-primary-fixed-dim">ACTIVE NODES</span>
+<div class="text-headline-md font-data-display text-white">142/144</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section 2: Predictive Meteorological Engine -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 order-last lg:order-first">
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-xl aspect-square flex flex-col justify-between border-white/10 bg-gradient-to-br from-white/5 to-transparent">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="thunderstorm" data-weight="fill">thunderstorm</span>
+<div class="bg-secondary/10 px-2 py-1 rounded text-[10px] text-secondary font-bold">ALGO_V4</div>
+</div>
+<div class="space-y-2">
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+<p class="text-label-md text-on-surface-variant">TURBULENCE PROBABILITY</p>
+<p class="text-headline-lg font-data-display text-white">84.2%</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl aspect-square flex flex-col justify-between border-white/10 bg-gradient-to-tr from-white/5 to-transparent">
+<div class="flex justify-between items-center">
+<div class="conic-gauge w-16 h-16 rounded-full flex items-center justify-center p-[2px]">
+<div class="bg-background w-full h-full rounded-full flex items-center justify-center">
+<span class="text-[10px] font-bold">75%</span>
+</div>
+</div>
+<span class="text-label-md text-on-surface-variant text-right">MODEL<br/>CONFIDENCE</span>
+</div>
+<img alt="Radar Visualization" class="rounded-lg h-24 object-cover" data-alt="abstract flowing digital lines representing weather radar waves in shades of cyan and electric blue on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-M4CBs7cBUfkCseRCForY6epKCVZs9Bv-Cmfa9WC5wHZQ8S8vG2oc9diaPAPyDRqwMVlfZffxSKLhNDBYa5CmNqs5IddH5Vn3iqOD96AaV2Zag63K7mkgcA3ZTW9G_v5vrBFhPyY3vYxRVWtnjxKnC8nB95wqq_et3MATS-xjuU4mDDr5uF3jn65FcPQi7pHiVP6VJneZRcJSe5S1M79VY2YfrzLdxN9pj_i4vQGD6_rkdxo9ahi0BZokY8CVL7KexktVW-cjiReB"/>
+</div>
+<div class="glass-card p-6 rounded-xl col-span-2 border-white/10">
+<div class="flex items-center justify-between mb-4">
+<h5 class="text-label-md text-white font-bold">ATMOSPHERIC PRESSURE TIMELINE</h5>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+<div class="flex items-end justify-between gap-1 h-32">
+<div class="w-full bg-secondary/30 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/40 h-[60%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/20 h-[30%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/60 h-[80%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/80 h-[95%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/50 h-[70%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/40 h-[55%] rounded-t-sm"></div>
+<div class="w-full bg-secondary/90 h-full rounded-t-sm"></div>
+<div class="w-full bg-secondary/30 h-[45%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-stack-lg">
+<div class="space-y-stack-sm">
+<span class="text-secondary font-label-md uppercase tracking-widest">Artificial Intelligence</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Predictive Meteorological Engine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Go beyond forecasting. Our engine simulates trillions of atmospheric particles to predict extreme weather events with 94% accuracy up to 72 hours in advance.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/30">
+<p class="text-body-sm italic text-on-surface-variant">"AeroAnalytics allowed us to pre-emptively reroute 400 cargo flights during the Arctic Vortex, saving $12M in fuel and delays."</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-700 overflow-hidden">
+<img alt="Executive Portrait" data-alt="headshot of a confident mid-40s male logistics executive with a sharp haircut, wearing a navy suit, clean professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe2HhRDt3lqKbUr1jlh4c0YrnHbDQIT4xW8PBvC0Gomecatf_Wcyr7g4cphwazvnT8iBKGo9PycFV5oXKVtZPkRcFjdwfemuSaNLSmxJwMutM1OAeGYMkdU1Ft2EHuL1WxfU8nuCIwreMYLDGKs-_put8BHgwveQN1aroewsa0BRT9XuTwuQATbQckC9J2v-xpXSIkNCvt4wQzeLvnkE0ojN4iBk0XCKIWnEY9_bRfNUjCFXxUHL5fOt7FjyTTyCqpYHsko5naZzUG"/>
+</div>
+<div>
+<p class="text-label-md text-white">Marcus Thorne</p>
+<p class="text-[10px] text-on-surface-variant uppercase">Director of Ops, SkyBound Global</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section 3: Logistics Routing API -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 space-y-stack-lg">
+<div class="space-y-stack-sm">
+<span class="text-tertiary-fixed-dim font-label-md uppercase tracking-widest">Developer First</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Logistics Routing API</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamlessly integrate our atmospheric intelligence into your existing TMS or flight planning software. Built for scale, security, and developer joy.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group cursor-default">
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-white group-hover:border-tertiary-fixed-dim group-hover:text-tertiary-fixed-dim transition-colors">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</div>
+<span class="text-body-md font-medium">RESTful &amp; GraphQL Support</span>
+</div>
+<div class="flex items-center gap-4 group cursor-default">
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-white group-hover:border-tertiary-fixed-dim group-hover:text-tertiary-fixed-dim transition-colors">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<span class="text-body-md font-medium">AES-256 Payload Encryption</span>
+</div>
+<div class="flex items-center gap-4 group cursor-default">
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-white group-hover:border-tertiary-fixed-dim group-hover:text-tertiary-fixed-dim transition-colors">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+</div>
+<span class="text-body-md font-medium">100ms API Response Times</span>
+</div>
+</div>
+<button class="border border-tertiary-fixed-dim text-tertiary-fixed-dim px-8 py-3 rounded-lg font-bold hover:bg-tertiary-fixed-dim/10 transition-all active:scale-95">Read Documentation</button>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-card rounded-xl overflow-hidden border-white/10 shadow-2xl">
+<div class="bg-white/5 px-4 py-2 border-b border-white/10 flex items-center justify-between">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+</div>
+<div class="text-[10px] text-on-surface-variant font-mono">POST /v2/route-optimization</div>
+</div>
+<div class="p-6 font-mono text-sm overflow-x-auto">
+<pre class="text-blue-300"><code>{
+  <span class="text-cyan-400">"origin"</span>: <span class="text-amber-200">"SFO"</span>,
+  <span class="text-cyan-400">"destination"</span>: <span class="text-amber-200">"LHR"</span>,
+  <span class="text-cyan-400">"constraints"</span>: {
+    <span class="text-cyan-400">"min_altitude"</span>: <span class="text-purple-300">32000</span>,
+    <span class="text-cyan-400">"max_turbulence_g"</span>: <span class="text-purple-300">0.4</span>
+  },
+  <span class="text-cyan-400">"optimizer"</span>: <span class="text-amber-200">"fuel_efficiency"</span>
+}</code></pre>
+<div class="mt-6 border-t border-white/5 pt-6">
+<pre class="text-green-300"><code>{
+  <span class="text-cyan-400">"optimal_path_id"</span>: <span class="text-amber-200">"AA-99812"</span>,
+  <span class="text-cyan-400">"eta_adjustment"</span>: <span class="text-purple-300">-14.2</span>, <span class="text-slate-500">// minutes</span>
+  <span class="text-cyan-400">"fuel_saved_lbs"</span>: <span class="text-purple-300">4210</span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="glass-card rounded-3xl p-12 text-center space-y-stack-lg border-primary-container/20 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary-container/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-container/10 blur-[100px] rounded-full"></div>
+<h2 class="font-headline-xl text-headline-xl text-white relative z-10">Ready for atmospheric clarity?</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto relative z-10">Join the world's most advanced logistics teams and gain a literal birds-eye view of your global operations.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10 pt-4">
+<button class="bg-cyan-400 text-slate-950 font-bold px-10 py-4 rounded-xl text-lg hover:bg-cyan-300 transition-all hover:scale-105 active:scale-95 neon-glow-primary">Request Live Demo</button>
+<button class="glass-card text-white font-bold px-10 py-4 rounded-xl text-lg hover:bg-white/10 transition-all active:scale-95">Speak to an Expert</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950/90 backdrop-blur-lg border-t border-white/5 font-['Space_Grotesk'] text-slate-300 text-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto items-center">
+<div class="space-y-6">
+<div class="text-xl font-bold text-cyan-400">AeroAnalytics</div>
+<p class="max-w-xs text-slate-500">© 2024 AeroAnalytics. Atmospheric Precision for Global Logistics.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">System Status</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">API Docs</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors hover:underline decoration-cyan-400 underline-offset-4" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>
