@@ -115,7 +115,7 @@ export default function Capabilities() {
                 <div className="flex items-end justify-between gap-1 h-32">
                   <div className="w-full bg-secondary/30 h-[40%] rounded-t-sm"></div>
                   <div className="w-full bg-secondary/40 h-[60%] rounded-t-sm"></div>
-                  <div class="w-full bg-secondary/20 h-[30%] rounded-t-sm"></div>
+                  <div className="w-full bg-secondary/20 h-[30%] rounded-t-sm"></div>
                   <div className="w-full bg-secondary/60 h-[80%] rounded-t-sm"></div>
                   <div className="w-full bg-secondary/80 h-[95%] rounded-t-sm"></div>
                   <div className="w-full bg-secondary/50 h-[70%] rounded-t-sm"></div>
